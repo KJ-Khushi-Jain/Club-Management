@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nav bars Only</title>
+        <style>
+            body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            min-height: 131px;
+            -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, .1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*__________________________________________________________________________for responsiveness of logo_______________________________________________________________________________*/
+        .custom-responsive-image {
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+        }
+
+        @media only screen and (min-width: 565px) {
+            .custom-responsive-image {
+                height: 80px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 650px) {
+            .custom-responsive-image {
+                height: 100px;
+                top: 5px;
+                left: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 900px) {
+            .custom-responsive-image {
+                height: 120px;
+                top: 5px;
+                left: 10px;
+            }
+        }
+
+        /* _____________________________________________________________________________Animating text______________________________________________________________________________________ */
+        .custom-brand-name {
+            color: transparent;
+            background: url(https://tse2.mm.bing.net/th?id=OIP.BqA_IdV0cAZu3w6HpAoMOwHaEo&pid=Api&P=0&h=180) repeat;
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation-name: masked-animation;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            font-family: 'Hind', sans-serif;
+        }
+
+        @keyframes masked-animation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        /* _____________________________________________________________________to align sentences column wise to wards end_________________________________________________________________ */
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        /* _________________________________________________________________________________Sidewise Nav bar________________________________________________________________________________ */
+        .side-navbar {
+            margin-top: 131px;
+            width: 170px;
+            /* Adjust the width as needed */
+            background-color: #333;
+            /* Sidebar background color */
+            color: #fff;
+            /* Text color */
+            position: fixed;
+            /* Fixed position to stay on the side */
+            height: 100%;
+            /* Make it occupy the full height of the screen */
+            overflow-y: auto;
+            /* Enable vertical scrolling if needed */
+            left: 0px;
+            top: 0px;
+        }
+
+        .side-navbar a {
+            padding: 15px 25px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ccc;
+            display: block;
+        }
+        .side-navbar a:hover {
+            color: #fff;
+        }
+        .side-navbar ul{
+            display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 10px;
+        }
+
+        /* __________________________________________________________________________________Main Container_________________________________________________________________________________ */
+        .main-container {
+            background-size: 50%;
+            background-position: center bottom;
+            margin-top: 140px;
+            margin-left: 170px;
+            /* 200px for sidebar + 20px for spacing */
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+
+        .profile {
+            background-image: url(floweratiiitk.jpg);
+            background-size: cover;
+            background-position: center bottom;
+            display: flex;
+            flex-direction: row;
+            /* Change flex-direction to row to place headings side by side */
+            align-items: center;
+            padding: 10px;
+            height: 230px;
+        }
+
+        .profile h1{
+            top:30px;
+            color: #f1f1f1; 
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="tofix">
+            <div>
+                <img src="https://lms.iiitkottayam.ac.in/pluginfile.php/1/theme_moove/logo/1663841307/logo.jpg"
+                    alt="IIIT Kottayam Logo" class="custom-responsive-image" style="padding-top: 5px;">
+            </div>
+            <div>
+                <div class="flex flex-column flex-end">
+                    <span class="custom-brand-name big-head notranslate"
+                        style="margin:0;font-family: 'Hind', sans-serif; font-size:33px;">
+                        <a href="#!home" style="color: transparent; margin-right: 40px; text-align: right; direction: rtl;"> भारतीय सूचना प्रौद्योगिकी संस्थान कोट्टायम</a>
+                    </span>
+                    <span class="custom-brand-name big-head notranslate" style="margin:0;font-size: 21.5px">
+                        <a href="#!home" style="color: transparent; margin-right: 40px;">Indian Institute of Information Technology
+                            Kottayam</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="side-navbar">
+            <ul class="side-head">
+                <a href="functionalpage.html">Dashboard</a>
+                <a href="clubleads.html">Club-leads</a>
+                <a href="profile.html">Profile</a>
+                <a href="calander.html">Calander</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="elections.html">Elections</a>
+                <a href="settings.html">Settings</a>
+            </ul>
+            <div class="image-container"></div>
+        </nav>
+
+        <div class="main-container">
+            <!--Your content goes here-->
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildbeats</title>
+    <style>
+         .custom-brand-name {
+            color: transparent;
+            background: url(https://tse2.mm.bing.net/th?id=OIP.BqA_IdV0cAZu3w6HpAoMOwHaEo&pid=Api&P=0&h=180) repeat;
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation-name: masked-animation;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            font-family: 'Hind', sans-serif;
+        }
+
+        @keyframes masked-animation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+
+
+
+
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            min-height: 131px;
+            -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, .1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+        a{
+            text-decoration: none;
+        }
+
+
+         .side-navbar {
+            margin-top: 131px;
+            width: 170px;
+            /* Adjust the width as needed */
+            background-color: #333;
+            /* Sidebar background color */
+            color: #fff;
+            /* Text color */
+            position: fixed;
+            /* Fixed position to stay on the side */
+            height: 100%;
+            /* Make it occupy the full height of the screen */
+            overflow-y: auto;
+            /* Enable vertical scrolling if needed */
+            left: 0px;
+            top: 0px;
+        }
+
+        .side-navbar a {
+            padding: 15px 25px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ccc;
+            display: block;
+        }
+        .side-navbar a:hover {
+            color: #fff;
+        }
+        .side-navbar ul{
+            display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 10px;
+        }
+    
+
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply a background color and font family to the whole document */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallup.net/wp-content/uploads/2016/01/309145-colorful-multi_color-abstract.jpg');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style the header */
+        header {
+            background-color: green;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* Style the navigation bar */
+        nav {
+            background-color: blue;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Style the navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Style the club sections */
+        .club-section {
+            background-color: black;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+/* Wavy text effect */
+.wavy-text {
+    font-family: 'jokermann', cursive;
+    animation: wavy 2s infinite linear;
+}
+
+@keyframes wavy {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-3px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+        /* Style individual club containers */
+        .club {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style club images */
+        .club img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Style club headings */
+        .club h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Style club descriptions */
+        .club p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Hover effect for navigation links */
+        nav a:hover {
+            background-color: #1976D2;
+            color: #fff;
+        }
+
+        /* Add animation to the club containers on hover */
+        .club:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1 class="wavy-text">Welcome to Wildbeats</h1>
+</header>
+
+    <span class="custom-brand-name big-head notranslate" style="margin:0;font-family: 'Hind', sans-serif; font-size:33px;">
+    <a href="#!home" style="color: transparent; margin-right: 40px; text-align: right; direction: rtl;"> भारतीय सूचना प्रौद्योगिकी संस्थान कोट्टायम</a>
+    </span>
+    <span class="custom-brand-name big-head notranslate" style="margin:0;font-size: 21.5px">
+
+    <nav>
+        <a href="#dance-club">Dance Club</a>
+        <a href="#art-club">Art Club</a>
+        <a href="#music-club">Music Club</a>
+        <a href="#drama-club">Drama Club</a>
+    </nav>
+
+    <nav class="side-navbar">
+        <ul class="side-head">
+            <a href="functionalpage.html">Dashboard</a>
+            <a href="clubleads.html">Club-leads</a>
+            <a href="profile.html">Profile</a>
+            <a href="calander.html">Calander</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="elections.html">Elections</a>
+            <a href="settings.html">Settings</a>
+        </ul>
+        <div class="image-container"></div>
+    </nav>
+
+    <section id="dance-club" class="club-section">
+        <div class="club"><a href="file:///C:/Users/vyshu/OneDrive/Desktop/danceclub.html">
+            <img src="C:\Users\vyshu\OneDrive\Desktop\Python Project\dancewildbeats.jpeg" alt="Dance Club" width="250" height="250">
+            </a>
+            <h2>Dance Club</h2>
+            <p>Welcome to the Dance Club! We are passionate about dancing and love to express ourselves through various dance forms.</p>
+        </div>
+    </section>
+    <section id="art-club" class="club-section">
+        <div class="club"><a href="file:///C:/Users/vyshu/OneDrive/Desktop/artclub.html">
+            <img src="C:\Users\vyshu\OneDrive\Desktop\Python Project\artwildbeats.jpeg" alt="Art Club" width="250" height="250">
+</a>
+            <h2>Art Club</h2>
+            <p>The Art Club is a place for creative minds to come together. We explore different forms of art and showcase our talents.</p>
+        </div>
+    </section>
+    <section id="music-club" class="club-section">
+        <div class="club"><a href="file:///C:/Users/vyshu/OneDrive/Desktop/musicclub.html">
+            <img src="C:\Users\vyshu\OneDrive\Desktop\Python Project\musicwildbeats.jpg" alt="Music Club" width="250" height="250">
+</a>
+            <h2>Music Club</h2>
+            <p>Join the Music Club to immerse yourself in the world of music. We appreciate all genres and love making beautiful melodies.</p>
+        </div>
+    </section>
+    <section id="drama-club" class="club-section">
+        <div class="club"><a href="file:///C:/Users/vyshu/OneDrive/Desktop/dramaclub.html">
+            <img src="C:\Users\vyshu\OneDrive\Desktop\Python Project\dramawildbeats.jpeg" alt="Drama Club" width="250" height="250">
+</a>
+            <h2>Drama Club</h2>
+            <p>The Drama Club is where actors and enthusiasts meet. We perform plays, improvise scenes, and have a lot of fun on stage!</p>
+        </div>
+    </section>
+<footer>
+    <p>&copy; 2023 Wildbeats. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

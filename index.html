@@ -1,0 +1,117 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIIT Kottayam Clubs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <nav>
+      <ul class="sidenav">
+        <li><img
+            src="C:\Users\jaink\Downloads\[removal.ai]_9c763a70-855f-4d3a-98bd-ed69d6833f38-screenshot-2023-09-22-000209.png"
+            class="logo"></li>
+        <li class="section"><a href="#">Home</a></li>
+        <li class="section"><a href="#">About</a></li>
+        <li class="section"><a href="#">Contact</a></li>
+        <li class="section"><a href="#">Menu</a></li>
+        <li class="section"><a href="#">Research</a></li>
+        <li class="section"><a href="#">Details</a></li>
+        <li class="section"><a href="#">Login</a></li>
+        <li class="section"><button onclick="darkMode()" class="dark-mode">&#x263E;<button></li>
+      </ul>
+    </nav>
+    <!-- <nav>
+                <ul class="set2">
+                    <li><span>&#9884;</span></li>
+                    <li><span>&#9884;</span></li>
+                    <li><span>&#9884;</span></li>
+                    <li><span>&#9884;</span></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar"></div> -->
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="#">&#9884;</a>
+        <a href="#">&#9884;</a>
+        <a href="#">&#9884;</a>
+        <a href="#">&#9884;</a>
+      </div>
+    </div>
+
+    <span class="three" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <br> <br> </span>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "15%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+
+      function darkMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+      }
+    </script>
+
+<br><br><br><br><br><br><br>
+    <div class="d1">
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\Screenshot 2023-09-22 182402.png" alt="Wildbeats"
+              width="600" height="400">
+          </a>
+          <div class="desc">WILDBEATS</div>
+        </div>
+      </div>
+
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\trendles.jpg" alt="Trendles" width="600"
+              height="400">
+          </a>
+          <div class="desc">TRENDLES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d2">
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_lights.jpg">
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\betalabs.png" alt="beta labs" width="600"
+              height="400">
+          </a>
+          <div class="desc">BETA LABS</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\sportec.jpg" alt="sports club" width="600"
+              height="400">
+          </a>
+          <div class="desc">SPORTEC</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+</body>
+
+</html>

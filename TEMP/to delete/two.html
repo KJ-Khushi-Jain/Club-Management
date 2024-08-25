@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.emoji {
+  position: absolute;
+  display: block;
+  font-size: 50px;
+}
+
+.eye {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.pupil {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Eye of Emoji Follows Mouse Cursor</h1>
+
+<div class="emoji">😊</div>
+<div class="eye">
+    <div class="pupil"></div>
+</div>
+
+<script>
+document.addEventListener('mousemove', function(e) {
+    var eye = document.querySelector('.eye');
+    var pupil = document.querySelector('.pupil');
+    var x = e.clientX - eye.getBoundingClientRect().left - (eye.offsetWidth / 2);
+    var y = e.clientY - eye.getBoundingClientRect().top - (eye.offsetHeight / 2);
+    var angle = Math.atan2(y, x) * (180 / Math.PI);
+    var distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    var maxDistance = (eye.offsetWidth / 2) - (pupil.offsetWidth / 2);
+    if (distance > maxDistance) {
+        x = Math.cos(angle * (Math.PI / 180)) * maxDistance;
+        y = Math.sin(angle * (Math.PI / 180)) * maxDistance;
+        angle = Math.atan2(y, x) * (180 / Math.PI);
+    }
+    pupil.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIIT Kottayam Clubs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #8ccf7e;
+            /* Light green background color */
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            /* Stick to the top of the viewport */
+            z-index: 100;
+            /* Ensure it's above other content */
+            color: black;
+            /* Text color is black */
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: black;
+            /* Text color is black */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #6ba65f;
+            /* Darker green on hover */
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .club-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Resize images to maintain aspect ratio perfectly */
+        .club-box img {
+            max-width: 100%;
+            /* Adjust this value as needed */
+            max-height: 100%;
+            /* Adjust this value as needed */
+            object-fit: contain;
+            /* Maintain aspect ratio and fit within the box */
+            border: 1px solid #ddd;
+        }
+
+        /* Create space for the IIIT Kottayam logo */
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Menu</a>
+        <a href="#">Research</a>
+        <a href="#">Details</a>
+        <a href="#">Login</a>
+    </div>
+
+    <div class="header">
+        <!-- Add IIIT Kottayam logo here -->
+        <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\iiitk.jpg" alt="IIIT Kottayam Logo">
+        <h1>Welcome to IIIT Kottayam Clubs</h1>
+    </div>
+
+    <div class="container">
+        <div class="club-box">
+            <h2>Cultural Club</h2>
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\Screenshot 2023-09-22 182402.png" alt="Cultural Club Image">
+        </div>
+        <div class="club-box">
+            <h2>Sports Club</h2>
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\trendles.jpg" alt="Sports Club Image">
+        </div>
+        <div class="club-box">
+            <h2>Technical Club</h2>
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\betalabs.png" alt="Technical Club Image">
+        </div>
+        <div class="club-box">
+            <h2>Musical Club</h2>
+            <img src="C:\Users\jaink\OneDrive\Desktop\PROJECT\images\sportec.jpg" alt="Musical Club Image">
+        </div>
+    </div>
+</body>
+
+</html>
